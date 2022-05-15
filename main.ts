@@ -77,8 +77,11 @@ function Begin_Setup_Stage1 () {
     if (blockSettings.exists("Setup_text")) {
         textSprite = textsprite.create("Cboy Setup", 0, 2)
         textSprite.setPosition(32, 7)
+        textSprite2 = textsprite.create("Setup File Not Found", 0, 3)
+        textSprite2.setPosition(62, 27)
     }
 }
+let textSprite2: TextSprite = null
 let textSprite: TextSprite = null
 LoadSettings_1()
 Begin_Setup_Stage1()
