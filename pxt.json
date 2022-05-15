@@ -1,0 +1,46 @@
+{
+    "name": "Cboy",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.8.22",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#FFFFFF",
+        "#636363",
+        "#000000",
+        "#6e0000",
+        "#62471e",
+        "#ff0000",
+        "#ff9500",
+        "#fff100",
+        "#4aff00",
+        "#1e6700",
+        "#00fff3",
+        "#0900ff",
+        "#9a00ff",
+        "#cb7cff",
+        "#ff00d6"
+    ]
+}
