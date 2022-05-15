@@ -1,4 +1,5 @@
 function LoadSettings_1 () {
+    TextSprite2_Installed = false
     blockSettings.writeString("Cboy_Dialog_Frame", "Transparent")
     blockSettings.writeString("Cboy_Dialog_Cursor", "Transparent")
     blockSettings.writeString("Cboy_Dialog_TextColor", "White")
@@ -77,12 +78,22 @@ function Begin_Setup_Stage1 () {
     if (blockSettings.exists("Setup_text")) {
         textSprite = textsprite.create("Cboy Setup", 0, 2)
         textSprite.setPosition(32, 7)
-        textSprite2 = textsprite.create("Setup File Not Found", 0, 3)
-        textSprite2.setPosition(62, 27)
+        TextSprite2_Installed = true
+        textSprite2 = textsprite.create("" + convertToText(blockSettings.list().length) + " Settings", 0, 3)
+        textSprite2.setPosition(38, 27)
+        textSprite3 = textsprite.create("Currently Installed", 0, 3)
+        textSprite3.setPosition(62, 37)
     }
 }
+let textSprite3: TextSprite = null
 let textSprite2: TextSprite = null
 let textSprite: TextSprite = null
+let TextSprite2_Installed = false
 LoadSettings_1()
 Begin_Setup_Stage1()
 LoadSettings_2()
+game.onUpdate(function () {
+    if (TextSprite2_Installed) {
+        textSprite2.setText("" + convertToText(blockSettings.list().length) + " Settings")
+    }
+})
